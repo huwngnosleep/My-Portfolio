@@ -1,0 +1,139 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 20px;
+    font-family: Amatic SC;
+    font-weight: bolder;
+    padding-bottom: 50px;
+    background-color: rgb(253, 245, 234);
+    text-shadow: -5px 5px 15px rgb(39, 34, 34);
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+} 
+
+a:active {
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 20px 0;
+    align-self: center;
+}
+
+.header a {
+    opacity: 0.7;
+    margin-right: 5px;
+}
+
+.header a:hover {
+    opacity: 1;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center; 
+    width: 60%;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.image img{
+    width: 200px;
+    box-shadow: 3px 3px 5px rgb(39, 34, 34);
+    max-width: 100%;
+    height: auto;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.projects-list {
+    display: flex;
+}
+
+.projects-item {
+    width: 30%;
+    min-height: 300px;
+    min-width: 300px;
+    margin: auto auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    box-shadow: -3px 3px 10px black;
+    border-radius: 3px;
+}
+
+.projects-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+}
+
+.projects-item .title {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.card-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #92cce0e3;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: inherit;
+}
+
+.card-container:hover .overlay {
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap; 
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media(max-width: 574px) {
+    .about {
+        flex-direction: column-reverse;
+    }
+    .projects-list {
+        flex-direction: column;
+    }
+    .header {
+        width: 95%;
+    }
+}
